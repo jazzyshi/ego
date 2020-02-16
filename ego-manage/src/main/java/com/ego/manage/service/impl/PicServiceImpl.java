@@ -26,6 +26,8 @@ public class PicServiceImpl implements PicService {
 	private String basePath;
 	@Value("${ftpclient.filepath}")
 	private String filePath;
+	@Value("${nginx.port}")
+	private int nginxPort;
 
 	@Override
 	public Map<String,Object> upload(MultipartFile file) throws IOException {
@@ -34,7 +36,7 @@ public class PicServiceImpl implements PicService {
 		Map<String,Object> map = new HashMap<>();
 		if(result){
 			map.put("error", 0);
-			map.put("url","http://"+ host+"/"+genImageName);
+			map.put("url","http://"+ host+":"+nginxPort+"/"+genImageName);
 		}else{
 			map.put("error", 1);
 			map.put("message", "图片上传失败");
