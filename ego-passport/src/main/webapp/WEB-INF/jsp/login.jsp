@@ -12,7 +12,7 @@
 <div class="w">
     <div id="logo">
     	<a href="http://localhost:8082" clstag="passport|keycount|login|01">
-    		<img src="/images/EGO-logo.gif" alt="易购" width="170" height="60"/>
+    		<img src="/images/ego-logo.gif" alt="易购" width="170" height="60"/>
     	</a><b></b>
    	</div>
 </div>
@@ -77,7 +77,7 @@
 			doLogin:function() {
 				$.post("/user/login", $("#formlogin").serialize(),function(data){
 					if (data.status == 200) {
-						alert("登录成功！");
+						//alert("登录成功！");
 						if (redirectUrl == "") {
 							location.href = "http://localhost:8082";
 						} else {

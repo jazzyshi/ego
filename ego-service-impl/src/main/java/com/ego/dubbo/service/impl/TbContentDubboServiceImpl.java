@@ -52,4 +52,9 @@ public class TbContentDubboServiceImpl implements TbContentDubboService {
 		}
 	}
 
+	@Override
+	public int delete(long id) {
+		return tbContentMapper.deleteByPrimaryKey(id);
+	}
+
 }

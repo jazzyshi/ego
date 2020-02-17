@@ -62,9 +62,7 @@ public class TbItemServiceImpl implements TbItemService {
 
 	@Override
 	public int save(TbItem item, String desc,String itemParams) throws Exception {
-		
-		
-		
+
 		// 不考虑事务回滚
 		// long id = IDUtils.genItemId();
 		// item.setId(id);
@@ -97,22 +95,17 @@ public class TbItemServiceImpl implements TbItemService {
 		itemDesc.setItemId(id);
 		itemDesc.setCreated(date);
 		itemDesc.setUpdated(date);
-		
-		
+
 		TbItemParamItem paramItem = new TbItemParamItem();
 		paramItem.setCreated(date);
 		paramItem.setUpdated(date);
 		paramItem.setItemId(id);
 		paramItem.setParamData(itemParams);
 
-
 		int index = 0;
-
 		index = tbItemDubboServiceImpl.insTbItemDesc(item, itemDesc,paramItem);
 		System.out.println("index:" + index);
-		
-		
-		
+
 		final TbItem itemFinal = item;
 		final String descFinal = desc;
 		new Thread(){

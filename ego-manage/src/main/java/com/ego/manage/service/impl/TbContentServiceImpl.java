@@ -73,4 +73,9 @@ public class TbContentServiceImpl implements TbContentService {
 		
 		return index;
 	}
+
+	@Override
+	public int delete(long id) {
+		return tbContentDubboServiceImpl.delete(id);
+	}
 }

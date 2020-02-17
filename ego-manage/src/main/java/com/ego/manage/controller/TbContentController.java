@@ -43,4 +43,23 @@ public class TbContentController {
 		}
 		return er;
 	}
+	/**
+	 * 删除内容
+	 * @param ids
+	 * @return
+	 */
+	@RequestMapping("content/delete")
+	@ResponseBody
+	public EgoResult save(String ids){
+		EgoResult er = new EgoResult();
+		String[] idArray = ids.split(",");
+		int index = 0;
+		for(String a : idArray){
+			index = tbContentServiceImpl.delete(Integer.parseInt(a));
+		}
+		if(index>0){
+			er.setStatus(200);
+		}
+		return er;
+	}
 }

@@ -19,8 +19,6 @@ public interface TbContentCategoryDubboService {
 	int insTbContentCategory(TbContentCategory cate);
 	/**
 	 * 修改isparent通过id
-	 * @param id
-	 * @param isParent
 	 * @return
 	 */
 	int updIsParentById(TbContentCategory cate);

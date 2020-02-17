@@ -41,8 +41,6 @@ public class TbItemDubboServiceImpl implements TbItemDubboService {
 	}
 	@Override
 	public int updItemStatus(TbItem tbItem) {
-		
-		
 		return tbItemMapper.updateByPrimaryKeySelective(tbItem);
 	}
 	@Override

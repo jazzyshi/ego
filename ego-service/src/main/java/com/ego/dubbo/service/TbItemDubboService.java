@@ -17,8 +17,6 @@ public interface TbItemDubboService {
 	EasyUIDataGrid show(int page,int rows);
 	/**
 	 * 根据id修改状态
-	 * @param id
-	 * @param status
 	 * @return
 	 */
 	int updItemStatus(TbItem tbItem);

@@ -27,4 +27,6 @@ public interface TbContentDubboService {
 	 * @return
 	 */
 	List<TbContent> selByCount(int count,boolean isSort);
+
+	int delete(long id);
 }

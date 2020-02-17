@@ -18,4 +18,6 @@ public interface TbContentService {
 	 * @return
 	 */
 	int save(TbContent content);
+
+	int delete(long id);
 }
